@@ -1,0 +1,172 @@
+:root {
+  --bd-accent: #ffe484;
+  --bs-body-color-rgb: 222, 226, 230;
+  --bs-body-bg-rgb: 33, 37, 41;
+  --font-primary: #333;
+  /* --primary-color: #fac7ff; */
+  --primary-color: #fac7ff;
+  --dark-pink: #f385fd;
+  --dark-pink-2: #e94cf8;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Dekko", cursive;
+  background-color: var(--primary-color);
+  color: var(--font-primary);
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.masthead-notice {
+  background-color: var(--bd-accent);
+  box-shadow: inset 0 -1px 1px rgba(var(--bs-body-color-rgb), 0.15),
+    0 0.25rem 1.5rem rgba(var(--bs-body-bg-rgb), 0.75);
+}
+
+.buy-bruz-button {
+  font-family: "Slackey", sans-serif;
+  font-size: 25px;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--dark-pink);
+  color: white;
+  transition: transform 0.5s ease-in-out; /* Smooth transition for scaling */
+  animation: scaleAnimation 1.5s infinite alternate;
+  box-shadow: inset 0 -1px 1px rgba(var(--bs-body-color-rgb), 0.15),
+    0 0.25rem 1.5rem rgba(var(--bs-body-bg-rgb), 0.15);
+  border-radius: 15px;
+  border: none;
+}
+
+.buy-bruz-button:hover {
+  transform: scale(1.3); /* Scale the button on hover */
+}
+
+.buy-bruz-button {
+  transform: rotate(20deg);
+}
+
+@keyframes scaleAnimation {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+.bruiser-bold {
+  color: var(--dark-pink-2);
+  font-weight: bold;
+}
+
+p {
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  font-family: "Slackey", sans-serif;
+  font-size: calc(2.375rem + 1.5vw);
+}
+
+h2 {
+  font-family: "Slackey", sans-serif;
+  font-size: calc(1.6rem + 1.5vw);
+}
+
+h3 {
+  font-family: "Slackey", sans-serif;
+  font-size: calc(1rem + 1vw);
+}
+
+h4 {
+  font-size: calc(1rem + 1vw);
+}
+
+p {
+  font-size: calc(1rem + 0.6vw) !important;
+}
+
+@media screen and (max-width: 750px) {
+  p {
+    font-size: calc(1rem + 1.2vw) !important;
+  }
+}
+
+.tokenomics-section-info-item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  color: white;
+  border: 3px outset #333;
+  background-color: #f4b8fa;
+  gap: 10px;
+  align-items: center;
+  padding: 20px;
+  box-shadow: inset 0 -1px 1px rgba(var(--bs-body-color-rgb), 0.15),
+    0 0.25rem 1.5rem rgba(var(--bs-body-bg-rgb), 0.40);
+  border-radius: 15px;
+  border: none;
+  margin-bottom: 20px;
+}
+
+.buy-section__content-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+  align-items: center;
+  padding: 20px;
+  box-shadow: inset 0 -1px 1px rgba(var(--bs-body-color-rgb), 0.15),
+    0 0.25rem 1.5rem rgba(var(--bs-body-bg-rgb), 0.40);
+  border-radius: 15px;
+  border: none;
+}
+.buy-section__content-img {
+  display: flex;
+  width: 100px;
+  flex-shrink: 0;
+}
+.buy-section__content-text {
+  text-align: center;
+  color: white;
+}
+.buy-section__content-img img {
+  object-fit: contain;
+}
+
+.buy-section__img-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  .buy-section__content-container {
+    width: 100%;
+    gap: 50px;
+    flex-direction: row;
+  }
+  .buy-section__content-text {
+    text-align: left;
+  }
+  .buy-section__img-container {
+    width: 60%;
+  }
+}
